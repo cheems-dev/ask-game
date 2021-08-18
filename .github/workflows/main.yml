@@ -11,4 +11,3 @@ jobs:
         with:
           username: "cheems-dev"
           reponame: "ask-game"
-          token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
