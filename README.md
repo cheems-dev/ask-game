@@ -1,24 +1,25 @@
-# 03-fundamentos
+# Ask game
 
 ## Project setup
+
 ```
-yarn install
+npm run install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
-yarn serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
-yarn build
+npm run build
 ```
 
 ### Run your unit tests
-```
-yarn test:unit
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+npm run test:unit
+```
