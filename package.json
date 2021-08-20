@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.2.4"
   },
   "devDependencies": {
     "@vue/cli-service": "^4.5.13",
