@@ -4,7 +4,7 @@
 
   <div class="indecision-container">
     <h1>Recuerda terminar con un signo de interrogación (?)</h1>
-    <input type="text" placeholder="Hazme una pregunta" v-model="question ">
+    <input type="text" placeholder="Haz una pregunta" v-model="question ">
     <div v-if="isValidQuestion">
       <h2>{{ question }}</h2>
       <h2>{{ answer }}</h2>
@@ -44,20 +44,19 @@ export default {
       this.isValidQuestion = false
       if(!value.includes('?'))    
         return
-    
       this.isValidQuestion = true
       this.getAnswer()
     }
   },
   components: {
-    HollowDotsSpinner
+    HollowDotsSpinner,
   }
 
 }
 </script>
 
 <style scoped>
-
+    
     img, .bg-dark {
         height: 100vh;
         left: 0px;
@@ -69,7 +68,7 @@ export default {
     }
 
     .bg-dark {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.85);
     }
 
     .indecision-container {
@@ -78,10 +77,26 @@ export default {
     }
     
     input {
-        width: 250px;
-        padding: 10px 15px;
-        border-radius: 5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font: 1.5vw/1  'Special Elite', cursive;
+        font-size: 1.5vmin 3vh 4vmax;
+        color: #333;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 100%;
+        max-width: 60vw;
+        background-color: #ddd;
         border: none;
+        padding: 10px 11px 11px 11px;
+        border-radius: 3px;
+        box-shadow: none;
+        outline: none;
+        margin: 0;
+        box-sizing: border-box;
+        border-style: dashed;
+        text-align: center;
     }
     input:focus {
         outline: none;
@@ -96,9 +111,14 @@ export default {
     h1, h2 {
         color: white;
     }
+
+    h1{
+      font-size: 3vw;
+    }
     
     h2 {
-        margin-top: 100px;
+      margin-top: 10vh;
+      font-size: 3vw;
     }
 
     .center {
@@ -106,4 +126,5 @@ export default {
       justify-content: center;
     }
 
+  
 </style>  
