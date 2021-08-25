@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indecision Component Renders correctly 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <!--v-if-->
+  <div
+    class="bg-dark"
+  />
+  <div
+    class="indecision-container"
+  >
+    <h1>
+      Recuerda terminar con un signo de interrogación (?)
+    </h1>
+    <input
+      placeholder="Haz una pregunta"
+      type="text"
+    />
+    <!--v-if-->
+  </div>
+  
+</div>
+`;
