@@ -18,7 +18,7 @@ export default {
       type: Number,
       default: 100,
       validator (value) {
-        return value > 0
+        return value >= 0
       }
     },
 
@@ -34,10 +34,10 @@ export default {
       return this.counter * this.counter
     },
     incrementCount() {
-      ++this.counter
+      this.counter++
     },
     decrementCount() {
-      --this.counter
+      this.counter--
     }
   },
   computed: {

@@ -30,18 +30,24 @@ export default {
   },
   methods: {
     async getAnswer() {
-      
-      const {answer, image} = await fetch('https://yesno.wtf/api').then(
-        response => response.json()
-      )
-      this.isValidQuestion = true
-      this.answer = (answer === 'yes') ? 'Si' : 'No'
-      this.image = image
+      try {
+        const {answer, image} = await fetch('https://yesno.wtf/api').then(
+          response => response.json()
+        )
+        this.isValidQuestion = true
+        this.answer = (answer === 'yes') ? 'Si' : 'No'
+        this.image = image
+      } catch (error) {
+        console.log(`IndecisionComponent: ${error}`)        
+        this.answer = 'No se pudo cargar la API'
+        this.image = null
+      }
     }
   },
   watch: {
     question(value, oldValue){
       this.isValidQuestion = false
+      console.log({value})
       if(!value.includes('?'))    
         return
       this.isValidQuestion = true
@@ -51,7 +57,6 @@ export default {
   components: {
     HollowDotsSpinner,
   }
-
 }
 </script>
 
